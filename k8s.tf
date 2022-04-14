@@ -40,5 +40,5 @@ resource "google_container_node_pool" "np" {
 }
 
 output "how_to_kubectl" {
-  value = var.gke_enabled ? "gcloud container clusters get-credentials ${google_container_cluster.gke-cluster.0.name}" : ""
+  value = var.gke_enabled ? "gcloud container clusters get-credentials ${google_container_cluster.gke-cluster.0.name} --region ${google_container_cluster.gke-cluster.0.location}" : ""
 }

@@ -1,6 +1,7 @@
 provider "google" {
   project     = var.project
   credentials = var.credentials
+  zone = "${var.region_name}-b"
 }
 ######################################################################
 output "rs_ui_dns" {
